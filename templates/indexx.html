@@ -1,0 +1,51 @@
+
+{% block body %}
+{% if session['logged_in'] %}
+<p>You're logged in already!</p>
+{% else %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  
+  
+  
+      <!--link rel="stylesheet" href="css/style.css"-->
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/indexx.css') }}">
+  
+</head>
+
+<body>
+
+  <html lang="en-US">
+<head>
+  <meta charset="utf-8">
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+</head>
+    <div id="login">
+ <form action="/login" method="POST">
+ <input type="text" name="usernme" placeholder="user">
+ <input type="password" name="pas" placeholder="password">
+ <input type="submit" value="login ">   	
+      <!--form name='form-login' method="post">
+        <span class="fontawesome-user"></span>
+          <input type="text" name ="username" placeholder="Username">
+       
+        <span class="fontawesome-lock"></span>
+          <input type="password" name"password" placeholder="Password">
+        
+        <input type="submit" value="Login"-->
+
+</form>
+{% endif %}
+{% endblock %}
+  
+
+</body>
+
+</html>
